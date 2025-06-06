@@ -2,5 +2,22 @@
     {
         "source": -1001203493551,
         "destination": [-1002565975919, -1002667260218, -1002671676345, -1002588974171, -1002344790513, -1002580838888]
-    }
+    },
+    {
+    "source": "-10087654321#000000", // Topic/Forum group
+    "destination": ["-10033333333#654321"],
+    "filters": ["word1", "word2"] // message that contain this word will be forwarded
+  },
+  {
+    "source": -10087654321,
+    "destination": [-10033333333],
+    "blacklist": ["word3", "word4"] // message that contain this word will not be forwarded
+  },
+  {
+    "source": -10087654321,
+    "destination": [-10033333333],
+    "filters": ["word5"],
+    "blacklist": ["word6"]
+    // message must contain word5 and must not contain word6 to be forwarded
+  }
 ]
