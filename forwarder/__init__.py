@@ -19,7 +19,8 @@ httpx_logger = logging.getLogger('httpx')
 httpx_logger.setLevel(logging.WARNING)
 
 # load json file
-config_name = "chat_list.json"
+BASE_DIR = path.dirname(path.abspath(__file__))
+config_name = path.join(BASE_DIR, "chat_list.json")
 if not path.isfile(config_name):
     LOGGER.error("No chat_list.json config file found! Exiting...")
     exit(1)
