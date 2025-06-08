@@ -17,17 +17,18 @@ LOGGER = logging.getLogger(__name__)
 httpx_logger = logging.getLogger('httpx')
 httpx_logger.setLevel(logging.WARNING)
 
-# 👇 Define source and destination directly here
-SOURCE_CHAT_ID = -1001203493551
-
-DESTINATION_CHAT_IDS = [
-    -1002565975919,
-    -1002667260218,
-    -1002671676345,
-    -1002588974171,
-    -1002344790513,
-    -1002580838888
-]
+# 👇 Directly define source and destination chat IDs inside CONFIG
+CONFIG = {
+    "source": -1001203493551,
+    "destination": [
+        -1002565975919,
+        -1002667260218,
+        -1002671676345,
+        -1002588974171,
+        -1002344790513,
+        -1002580838888
+    ]
+}
 
 # Load environment variables
 BOT_TOKEN = getenv("BOT_TOKEN")
